@@ -1,0 +1,46 @@
+{
+  "name": "@skyltmax/esbuild-plugins",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.ts src/",
+    "lint:fix": "eslint --fix --ext .js,.ts src/",
+    "build:debug": "node build.js && tsc --emitDeclarationOnly --outFile test/src/index.d.ts",
+    "build": "NODE_ENV=production node build.js && tsc --emitDeclarationOnly --outFile dist/index.d.ts",
+    "debug": "pnpm build:debug && pnpm debug:run",
+    "debug:watch": "pnpm build:debug && pnpm debug:run -- --watch",
+    "debug:run": "node test/build.js"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "glob": "^7.2.0",
+    "js-yaml": "^4.1.0"
+  },
+  "peerDependencies": {
+    "esbuild": "0.13.x",
+    "postcss": ">=8 <9"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^7.2.0",
+    "@types/js-yaml": "^4.0.4",
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "esbuild": "^0.13.11",
+    "eslint": "<8",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "postcss": "^8.3.11",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4"
+  }
+}

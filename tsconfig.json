@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "esNext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es2017",
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "importsNotUsedAsValues": "error",
+    "incremental": true,
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo"
+  },
+  "files": ["src/index.d.ts"],
+  "include": ["src/**/*.ts"],
+  "compileOnSave": false,
+  "tslint": {
+    "jsEnable": true
+  }
+}

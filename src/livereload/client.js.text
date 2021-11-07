@@ -1,0 +1,1 @@
+(()=>{var r=window.__esbuildLiveReloadPort||3035,l=new EventSource(`http://localhost:${r}/esbuild`);l.onmessage=s=>{let e=JSON.parse(s.data);if(e.success)console.log("esbuild rebuilt, reloading"),location.reload();else if(console.error("esbuild build failed:"),e.errors)for(let o of e.errors)console.error(o.text)};})();
